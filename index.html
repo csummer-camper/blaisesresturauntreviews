@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Blaises resturant reviews</Title>
+        <style>
+            body{
+         background-color: #1c794c;
+            }
+
+        </style>
+    </head>
+    <body>
+     <header><h1 align="center">Blaise's Resturaunt Reviews</h1></header>   
+        
+        <input
+        type="text"
+        id="stateInput"
+        placeholder="Write your state here:">
+        <button onClick="goToState()">
+    Submit</button>
+    <script>
+        function goToState(){
+        let state = document.getElementById("stateInput").value;
+        state = state.trim();
+        state = state.toLowerCase();
+        state = state.replaceAll(" ", "-");
+        window.location.href = state + ".html";
+        }
+    </script>
+    </body>
+</html>
